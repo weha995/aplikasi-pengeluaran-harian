@@ -1,0 +1,158 @@
+/* Tambahan styling untuk aplikasi pengeluaran harian */
+
+/* Warna kustom */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --dark-color: #34495e;
+    --light-color: #f8f9fa;
+}
+
+/* Animasi */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Card hover effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Custom category badges */
+.category-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.category-food {
+    background-color: #FF5733;
+    color: white;
+}
+
+.category-transportation {
+    background-color: #3498DB;
+    color: white;
+}
+
+.category-entertainment {
+    background-color: #9B59B6;
+    color: white;
+}
+
+.category-utilities {
+    background-color: #F1C40F;
+    color: black;
+}
+
+.category-shopping {
+    background-color: #2ECC71;
+    color: white;
+}
+
+.category-health {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.category-education {
+    background-color: #34495E;
+    color: white;
+}
+
+.category-other {
+    background-color: #95A5A6;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header h5 {
+        font-size: 1rem;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
+
+/* Form improvements */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Nice loading spinner */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Total amount emphasis */
+#total-amount {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#total-amount:hover {
+    color: var(--primary-color);
+}
+
+/* Empty state styling */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.empty-state-text {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
